@@ -3,72 +3,362 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Бумажная энергетика: деньги из воздуха в 2026 году</title>
+  <title>БУМАЖНАЯ ЭНЕРГЕТИКА 2026 — Квантовый скачок в богатство</title>
   
+  <!-- Иконки и шрифты для дорогого вида -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      /* Системные шрифты */
-      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
-      /* Цветовая палитра */
-      --color-text-primary: #111827;
-      --color-text-secondary: #4b5563;
-      --color-text-tertiary: #9ca3af;
-      --color-background-primary: #ffffff;
-      --color-background-secondary: #f3f4f6;
-      --color-border-tertiary: #e5e7eb;
-
-      /* Интерфейс */
-      --border-radius-md: 8px;
-      --border-radius-lg: 12px;
+      --font-sans: 'Montserrat', sans-serif;
+      
+      /* Цвета дорогой эзотерики */
+      --bg-main: #0B0F19;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --bg-card-hover: rgba(255, 255, 255, 0.07);
+      --border-glow: rgba(255, 215, 0, 0.15);
+      
+      --text-main: #FFFFFF;
+      --text-muted: #8F9CAE;
+      
+      /* Градиенты успеха */
+      --grad-gold: linear-gradient(135deg, #FFE259 0%, #FFA751 100%);
+      --grad-neon: linear-gradient(135deg, #00F5A0 0%, #00D9F6 100%);
+      --grad-dark: linear-gradient(180deg, #161F33 0%, #0B0F19 100%);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-sans); background-color: var(--color-background-primary); color: var(--color-text-primary); }
-    .hero { text-align: center; padding: 3rem 1.5rem 2rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
-    .badge { display: inline-block; background: #FAC775; color: #412402; font-size: 11px; font-weight: 500; padding: 4px 14px; border-radius: 100px; letter-spacing: 0.04em; margin-bottom: 1rem; }
-    .hero h1 { font-size: 26px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; margin-bottom: 0.75rem; }
-    .hero .sub { font-size: 15px; color: var(--color-text-secondary); max-width: 480px; margin: 0 auto 1.5rem; line-height: 1.6; }
-    .price-block { display: flex; align-items: baseline; gap: 12px; justify-content: center; margin-bottom: 1.5rem; }
-    .price-old { font-size: 18px; color: var(--color-text-tertiary); text-decoration: line-through; }
-    .price-new { font-size: 36px; font-weight: 500; color: var(--color-text-primary); }
-    .cta-btn { background: #1D9E75; color: white; border: none; border-radius: var(--border-radius-lg); padding: 14px 36px; font-size: 16px; font-weight: 500; cursor: pointer; display: inline-block; transition: opacity 0.15s; text-decoration: none; }
-    .cta-btn:hover { opacity: 0.85; }
-    .urgency { font-size: 12px; color: #993C1D; margin-top: 10px; }
-    .section { padding: 2rem 1.5rem; border-bottom: 0.5px solid var(--color-border-tertiary); max-width: 800px; margin: 0 auto; }
-    .section-label { font-size: 11px; color: var(--color-text-tertiary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
-    .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
-    .module-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; }
-    .module-num { font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 4px; }
-    .module-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
-    .module-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
-    .pain-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .pain-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--color-text-primary); line-height: 1.5; }
-    .pain-list li i { color: #1D9E75; flex-shrink: 0; margin-top: 2px; }
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
-    .review-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem; }
-    .review-stars { color: #EF9F27; font-size: 13px; margin-bottom: 6px; }
-    .review-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; margin-bottom: 8px; font-style: italic; }
-    .review-author { font-size: 12px; color: var(--color-text-secondary); font-weight: 500; }
-    .bonuses { display: flex; flex-direction: column; gap: 8px; }
-    .bonus-item { display: flex; align-items: flex-start; gap: 10px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
-    .bonus-tag { background: #FAECE7; color: #993C1D; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 100px; flex-shrink: 0; white-space: nowrap; margin-top: 2px; }
-    .bonus-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.4; }
-    .guarantee { display: flex; align-items: center; gap: 16px; background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1.25rem; }
-    .guarantee-icon { font-size: 32px; color: #1D9E75; flex-shrink: 0; display: flex; align-items: center; }
-    .guarantee-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
-    .guarantee-text strong { color: var(--color-text-primary); font-weight: 500; }
-    .timer { display: flex; gap: 12px; justify-content: center; margin: 1.5rem 0; }
+    
+    body { 
+      font-family: var(--font-sans); 
+      background-color: var(--bg-main); 
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Фоновое свечение */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,245,160,0.08) 0%, rgba(0,0,0,0) 70%);
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    /* Скроллбар */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-main); }
+    ::-webkit-scrollbar-thumb { background: #1F293D; border-radius: 4px; }
+
+    /* Херо-блок */
+    .hero { 
+      text-align: center; 
+      padding: 6rem 1.5rem 4rem; 
+      position: relative;
+    }
+    
+    .badge { 
+      display: inline-flex; 
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 167, 81, 0.1); 
+      border: 1px solid #FFA751;
+      color: #FFA751; 
+      font-size: 12px; 
+      font-weight: 700; 
+      padding: 6px 16px; 
+      border-radius: 100px; 
+      letter-spacing: 0.05em; 
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(255, 167, 81, 0.2);
+    }
+    
+    .hero h1 { 
+      font-size: 42px; 
+      font-weight: 900; 
+      line-height: 1.15; 
+      margin-bottom: 1.5rem; 
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+    
+    .hero h1 span {
+      background: var(--grad-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .hero .sub { 
+      font-size: 18px; 
+      font-weight: 300;
+      color: var(--text-muted); 
+      max-width: 640px; 
+      margin: 0 auto 2.5rem; 
+      line-height: 1.6; 
+    }
+    
+    /* Цены */
+    .price-block { 
+      display: flex; 
+      align-items: baseline; 
+      gap: 16px; 
+      justify-content: center; 
+      margin-bottom: 2.5rem; 
+    }
+    
+    .price-old { 
+      font-size: 22px; 
+      color: #4E5D78; 
+      text-decoration: line-through; 
+    }
+    
+    .price-new { 
+      font-size: 54px; 
+      font-weight: 900; 
+      background: var(--grad-neon);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(0,245,160,0.3));
+    }
+    
+    /* Кнопки */
+    .cta-btn { 
+      background: var(--grad-neon); 
+      color: #000000; 
+      border: none; 
+      border-radius: 50px; 
+      padding: 18px 48px; 
+      font-size: 18px; 
+      font-weight: 700; 
+      cursor: pointer; 
+      display: inline-block; 
+      transition: all 0.3s ease; 
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 30px rgba(0, 245, 160, 0.4);
+    }
+    
+    .cta-btn:hover { 
+      transform: translateY(-3px);
+      box-shadow: 0 8px 40px rgba(0, 245, 160, 0.6);
+    }
+    
+    .urgency { 
+      font-size: 13px; 
+      color: #FF6B6B; 
+      margin-top: 15px; 
+      font-weight: 500;
+    }
+    
+    /* Секции */
+    .section { 
+      padding: 5rem 1.5rem; 
+      max-width: 1000px; 
+      margin: 0 auto; 
+    }
+    
+    .section-label { 
+      font-size: 13px; 
+      color: #00F5A0;
+      font-weight: 700;
+      letter-spacing: 0.15em; 
+      text-transform: uppercase; 
+      margin-bottom: 2.5rem; 
+      text-align: center;
+      position: relative;
+    }
+
+    .section-label::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--grad-neon);
+      margin: 8px auto 0;
+    }
+    
+    /* Сетка модулей */
+    .modules-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 20px; 
+    }
+    
+    .module-card { 
+      background: var(--bg-card); 
+      border: 1px solid var(--border-glow);
+      backdrop-filter: blur(10px);
+      border-radius: 16px; 
+      padding: 2rem; 
+      transition: all 0.3s ease;
+    }
+
+    .module-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-5px);
+      border-color: #FFA751;
+      box-shadow: 0 10px 30px rgba(255, 167, 81, 0.05);
+    }
+    
+    .module-num { 
+      font-size: 12px; 
+      font-weight: 700;
+      color: #FFA751; 
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px; 
+    }
+    
+    .module-title { 
+      font-size: 20px; 
+      font-weight: 700; 
+      color: var(--text-main); 
+      margin-bottom: 12px; 
+    }
+    
+    .module-desc { 
+      font-size: 14px; 
+      color: var(--text-muted); 
+      line-height: 1.6; 
+    }
+    
+    /* Список болей */
+    .pain-list { 
+      list-style: none; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 16px; 
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    
+    .pain-list li { 
+      display: flex; 
+      align-items: center; 
+      gap: 16px; 
+      font-size: 16px; 
+      background: rgba(255,255,255,0.02);
+      padding: 16px 24px;
+      border-radius: 12px;
+      border-left: 3px solid #00F5A0;
+    }
+    
+    .pain-list li i { 
+      color: #00F5A0; 
+      font-size: 20px;
+      flex-shrink: 0; 
+    }
+    
+    /* Отзывы */
+    .reviews-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 20px; 
+    }
+    
+    .review-card { 
+      background: var(--bg-card); 
+      border: 1px solid rgba(255,255,255,0.05); 
+      border-radius: 16px; 
+      padding: 2rem; 
+    }
+    
+    .review-stars { color: #FFE259; font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
+    .review-text { font-size: 14px; color: #E2E8F0; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+    .review-author { font-size: 13px; color: #FFA751; font-weight: 700; }
+    
+    /* Бонусы */
+    .bonuses { display: flex; flex-direction: column; gap: 12px; max-width: 700px; margin: 0 auto; }
+    .bonus-item { 
+      display: flex; 
+      align-items: center; 
+      gap: 16px; 
+      background: linear-gradient(90deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%); 
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 12px; 
+      padding: 1.25rem; 
+    }
+    
+    .bonus-tag { 
+      background: var(--grad-gold); 
+      color: #000; 
+      font-size: 11px; 
+      font-weight: 900; 
+      padding: 4px 12px; 
+      border-radius: 6px; 
+      flex-shrink: 0; 
+      text-transform: uppercase;
+    }
+    
+    .bonus-text { font-size: 14px; color: var(--text-main); }
+    .bonus-text strong { color: #FFA751; }
+    
+    /* Гарантия */
+    .guarantee { 
+      display: flex; 
+      align-items: center; 
+      gap: 24px; 
+      background: radial-gradient(80% 80% at 50% 50%, rgba(0,245,160,0.05) 0%, rgba(0,0,0,0) 100%);
+      border: 1px solid rgba(0, 245, 160, 0.2); 
+      border-radius: 24px; 
+      padding: 2.5rem; 
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .guarantee-icon { font-size: 48px; color: #00F5A0; flex-shrink: 0; }
+    .guarantee-text { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+    .guarantee-text strong { color: var(--text-main); font-weight: 700; font-size: 18px; display: block; margin-bottom: 6px;}
+    
+    /* Таймер */
+    .timer { display: flex; gap: 16px; justify-content: center; margin: 2rem 0; }
     .timer-block { text-align: center; }
-    .timer-num { font-size: 28px; font-weight: 500; color: var(--color-text-primary); display: block; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 14px; min-width: 56px; }
-    .timer-label { font-size: 11px; color: var(--color-text-tertiary); margin-top: 4px; }
-    .colon { font-size: 24px; color: var(--color-text-tertiary); align-self: center; padding-bottom: 16px; }
-    .footer-cta { text-align: center; padding: 2.5rem 1.5rem; }
-    .footer-cta p { font-size: 13px; color: var(--color-text-secondary); margin-top: 1rem; }
-    .disclaimer { font-size: 10px; color: var(--color-text-tertiary); text-align: center; padding: 1rem 1.5rem; line-height: 1.5; max-width: 600px; margin: 0 auto; }
+    .timer-num { 
+      font-size: 36px; 
+      font-weight: 900; 
+      color: #FFFFFF; 
+      display: block; 
+      background: #161F33; 
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; 
+      padding: 12px 20px; 
+      min-width: 75px; 
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .timer-label { font-size: 12px; color: var(--text-muted); margin-top: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .colon { font-size: 36px; color: #FFA751; align-self: center; padding-bottom: 24px; animation: blink 1s infinite; }
+    
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* Футер СТА */
+    .footer-cta { 
+      text-align: center; 
+      padding: 6rem 1.5rem; 
+      background: var(--grad-dark);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .footer-cta h2 { font-size: 36px; font-weight: 900; margin-bottom: 1.5rem; text-transform: uppercase; }
+    .footer-cta p { font-size: 15px; color: var(--text-muted); margin-top: 1.5rem; line-height: 1.7; }
+    
+    .disclaimer { font-size: 11px; color: #4E5D78; text-align: center; padding: 2rem 1.5rem; line-height: 1.6; max-width: 800px; margin: 0 auto; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+    /* Адаптив под мобилки */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .price-new { font-size: 42px; }
+      .guarantee { flex-direction: column; text-align: center; padding: 1.5rem; }
+      .footer-cta h2 { font-size: 26px; }
+    }
   </style>
 </head>
 <body>
@@ -76,19 +366,21 @@
 <h2 class="sr-only">Лендинг курса «Бумажная энергетика: деньги из воздуха 2026»</h2>
 
 <div class="hero">
-  <div class="badge">🔥 Набор закрывается через 48 часов</div>
-  <h1>Бумажная энергетика:<br>деньги из воздуха в 2026 году</h1>
-  <p class="sub">Единственный курс, который раскрывает, как зарабатывать 300 000 ₽ в месяц, просто складывая листы бумаги под лунным светом</p>
+  <div class="badge"><i class="ti ti-flame"></i> Набор закрывается через 48 часов</div>
+  <h1><span>Бумажная энергетика:</span><br>деньги из воздуха в 2026 году</h1>
+  <p class="sub">Уникальная квантовая технология заработка. Начни получать от 300 000 ₽ в месяц, правильно активируя и складывая листы бумаги под лунным светом.</p>
+  
   <div class="price-block">
     <span class="price-old">149 990 ₽</span>
     <span class="price-new">49 990 ₽</span>
   </div>
-  <button class="cta-btn" onclick="alert('Вы успешно подключились к денежному эгрегору! Инструкция выслана в астрал.')">Хочу зарабатывать на бумаге ↗</button>
-  <p class="urgency">⚡ Осталось 3 места из 300 (обновляется каждый час)</p>
+  
+  <button class="cta-btn" onclick="alert('Вы успешно подключились к денежному эгрегору! Инструкция выслана в астрал.')">Вступить в синдикат ↗</button>
+  <p class="urgency">⚡ Жесткий лимит: осталось 3 места из 300 (VIP-чат забит)</p>
 </div>
 
 <div class="section">
-  <div class="section-label">Таймер до закрытия набора</div>
+  <div class="section-label">До закрытия портала возможностей осталось</div>
   <div class="timer">
     <div class="timer-block"><span class="timer-num" id="hh">47</span><div class="timer-label">часов</div></div>
     <div class="colon">:</div>
@@ -99,120 +391,117 @@
 </div>
 
 <div class="section">
-  <div class="section-label">Программа — 7 модулей</div>
+  <div class="section-label">Сакральная программа — 7 модулей трансформации</div>
   <div class="modules-grid">
     <div class="module-card">
       <div class="module-num">Модуль 1</div>
       <div class="module-title">Квантовая бумага</div>
-      <div class="module-desc">Как выбрать бумагу с правильной вибрацией. А4 vs А3: что богаче</div>
+      <div class="module-desc">Как выбрать бумагу с правильной вибрацией. Расчет плотности. А4 vs А3: что генерирует больше кэша.</div>
     </div>
     <div class="module-card">
       <div class="module-num">Модуль 2</div>
       <div class="module-title">Складывание денег</div>
-      <div class="module-desc">Техники оригами для привлечения потоков. Журавль vs лягушка: разбор ROI</div>
+      <div class="module-desc">Секретные техники оригами для привлечения потоков. Журавль против лягушки: глубокий разбор ROI.</div>
     </div>
     <div class="module-card">
       <div class="module-num">Модуль 3</div>
       <div class="module-title">Лунный коридор</div>
-      <div class="module-desc">Оптимальные фазы луны для зарядки бумаги. Таблица на 2026 год</div>
+      <div class="module-desc">Оптимальные фазы луны для зарядки целлюлозы. Календарь планетарных таймингов на 2026 год.</div>
     </div>
     <div class="module-card">
       <div class="module-num">Модуль 4</div>
       <div class="module-title">Нейросети энергии</div>
-      <div class="module-desc">Как ИИ помогает усилить бумажный поток. ChatGPT для расчёта вибраций</div>
+      <div class="module-desc">Использование ИИ для автоматизации потоков. Правильные промпты в ChatGPT для расчета ментальных вибраций.</div>
     </div>
     <div class="module-card">
       <div class="module-num">Модуль 5</div>
-      <div class="module-title">Монетизация</div>
-      <div class="module-desc">Продажа заряженной бумаги через Авито. Первые 100 000 ₽ за месяц</div>
+      <div class="module-title">Агрессивная монетизация</div>
+      <div class="module-desc">Упаковка и продажа заряженной бумаги через Авито и крипто-каналы. Первые 100 000 ₽ за 14 дней.</div>
     </div>
     <div class="module-card">
       <div class="module-num">Модуль 6</div>
-      <div class="module-title">Масштабирование</div>
-      <div class="module-desc">Команда складывателей, делегирование луны, пассивный доход</div>
+      <div class="module-title">Масштабирование империи</div>
+      <div class="module-desc">Построение сетки складывателей на удаленке. Делегирование лунных фаз, выход на пассивное изобилие.</div>
     </div>
     <div class="module-card">
       <div class="module-num">Модуль 7</div>
       <div class="module-title">Духовный нетворкинг</div>
-      <div class="module-desc">Закрытый клуб миллионеров-бумажников. Выход только через астрал</div>
+      <div class="module-desc">Вход в закрытый VIP-клуб миллионеров-бумажников. Совместные выезды на места силы. Выход только через астрал.</div>
     </div>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-label">Вы придёте в нужное место, если...</div>
+  <div class="section-label">Этот курс для тебя, если...</div>
   <ul class="pain-list">
-    <li><i class="ti ti-check" style="font-size:16px" aria-hidden="true"></i> Вы устали работать и хотите, чтобы деньги приходили сами</li>
-    <li><i class="ti ti-check" style="font-size:16px" aria-hidden="true"></i> Традиционные методы заработка «не вашей вибрации»</li>
-    <li><i class="ti ti-check" style="font-size:16px" aria-hidden="true"></i> У вас есть доступ к бумаге и свободные вечера</li>
-    <li><i class="ti ti-check" style="font-size:16px" aria-hidden="true"></i> Вы чувствуете особую связь с канцелярскими товарами</li>
-    <li><i class="ti ti-check" style="font-size:16px" aria-hidden="true"></i> Вы готовы инвестировать в себя прямо сейчас</li>
+    <li><i class="ti ti-circle-check"></i> Вы тотально устали от работы в найме за копейки</li>
+    <li><i class="ti ti-circle-check"></i> Обычные бизнесы кажутся вам слишком приземленными и «не вашей вибрации»</li>
+    <li><i class="ti ti-circle-check"></i> Дома скопилась лишняя канцелярия и есть свободные вечера</li>
+    <li><i class="ti ti-circle-check"></i> Вы подсознательно чувствуете тонкую ментальную связь с бумагой</li>
+    <li><i class="ti ti-circle-check"></i> Вы готовы инвестировать в свое мышление прямо сейчас, а не завтра</li>
   </ul>
 </div>
 
 <div class="section">
-  <div class="section-label">Бонусы (только сегодня)</div>
+  <div class="section-label">Эксклюзивные бонусы при покупке сегодня</div>
   <div class="bonuses">
     <div class="bonus-item">
-      <span class="bonus-tag">Бонус 1</span>
-      <span class="bonus-text"><strong>Чек-лист «97 видов бумаги»</strong> — полный разбор энергетики каждого типа, включая туалетную (спойлер: она тоже работает)</span>
+      <span class="bonus-tag">Гайд</span>
+      <span class="bonus-text"><strong>Чек-лист «97 видов бумаги»</strong> — детальный разбор энергетики каждого типа, включая туалетную (спойлер: на ней самый быстрый оборот).</span>
     </div>
     <div class="bonus-item">
-      <span class="bonus-tag">Бонус 2</span>
-      <span class="bonus-text"><strong>Медитация «Стань листом»</strong> — аудио на 40 минут для синхронизации с бумажным потоком</span>
+      <span class="bonus-tag">Аудио</span>
+      <span class="bonus-text"><strong>Медитация «Стань листом»</strong> — мощный 40-минутный трек для синхронизации с финансовым эгрегором.</span>
     </div>
     <div class="bonus-item">
-      <span class="bonus-tag">Бонус 3</span>
-      <span class="bonus-tag" style="background: #9FE1CB; color: #04342C;">VIP</span>
-      <span class="bonus-text"><strong>Именной сертификат «Мастер бумажной энергетики»</strong> — распечатайте сами, на любой бумаге</span>
+      <span class="bonus-tag" style="background: var(--grad-neon);">VIP</span>
+      <span class="bonus-text"><strong>Именной сертификат «Мастер бумажной энергетики»</strong> — высылается в PDF (распечатайте сами на лучшем картоне).</span>
     </div>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-label">Отзывы учеников</div>
+  <div class="section-label">Результаты наших адептов</div>
   <div class="reviews-grid">
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">«Уже на третьей неделе моя бумага начала светиться. Муж думал, что это принтер сломался»</div>
+      <div class="review-text">«Уже на третьей неделе моя бумага начала светиться по ночам. Муж думал, что это сломался лазерный принтер, а это пошли первые деньги!»</div>
       <div class="review-author">Людмила К., Саратов</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">«Продал заряженный А4 на Авито за 5 000 ₽. Покупатель доволен. Я тоже»</div>
+      <div class="review-text">«Выставил на Авито обычный лист А4, заряженный по 3 модулю. Купили за 5 000 рублей через два часа. Покупатель написал, что дела пошли в гору. Работает!»</div>
       <div class="review-author">Денис В., Новосибирск</div>
     </div>
     <div class="review-card">
       <div class="review-stars">★★★★★</div>
-      <div class="review-text">«Скептик по жизни, но после модуля про луну я понял: это работает. Или не работает. Пока не ясно»</div>
-      <div class="review-author">Анонимный ученик</div>
+      <div class="review-text">«Был жестким скептиком, но после медитации «Стань листом» сознание перевернулось. Сложил журавлика — закрыл кредит. Совпадение? Не думаю.»</div>
+      <div class="review-author">Никита Т., Москва</div>
     </div>
   </div>
 </div>
 
 <div class="section">
   <div class="guarantee">
-    <div class="guarantee-icon">
-      <i class="ti ti-shield-check" aria-hidden="true"></i>
-    </div>
+    <i class="ti ti-shield-check guarantee-icon" aria-hidden="true"></i>
     <div class="guarantee-text">
-      <strong>Гарантия 30 дней или луна вернётся</strong><br>
-      Если через 30 дней вы не заработаете на бумаге ни рубля — мы вернём деньги. Нужно просто отправить нам 30 заряженных листов как доказательство работы над собой.
+      <strong>Железобетонная гарантия 30 дней</strong>
+      Если через месяц практик вы не почувствуете бумажный поток или не заработаете ни рубля — мы вернем всю сумму. Вам нужно будет лишь прислать нам 30 заряженных листов почтой в качестве доказательства того, что вы честно старались.
     </div>
   </div>
 </div>
 
 <div class="footer-cta">
-  <div class="badge">Последний шанс</div>
-  <h1 style="font-size: 22px; margin-bottom: 1rem;">Готов к бумажному изобилию?</h1>
-  <button class="cta-btn" onclick="alert('Вы успешно оформили рассрочку! Проверьте баланс кармы.')">Записаться за 49 990 ₽ ↗</button>
-  <p>💳 Рассрочка на 12 месяцев — всего 4 165 ₽/мес.<br>Принимаем Visa, МИР, крипту и добрые намерения</p>
+  <div class="badge"><i class="ti ti-alert-triangle"></i> Последний вагон</div>
+  <h2>Хватит смотреть, как богатеют другие</h2>
+  <button class="cta-btn" onclick="alert('Вы успешно оформили рассрочку! Добро пожаловать на борт.')">Забрать курс за 49 990 ₽ ↗</button>
+  <p>💳 Доступна беспроцентная рассрочка на 12 месяцев (всего 4 165 ₽/мес).<br>Принимаем карты МИР, зарубежные банки, USDT и чистые намерения.</p>
 </div>
 
 <div class="disclaimer">
-  * Результаты индивидуальны. Бумажная энергетика — это не финансовый совет, не магия и не медицина.<br>
-  Автор курса не несёт ответственности за лунные фазы, качество бумаги и жизненные решения учеников.<br>
-  Этот лендинг создан как сатира по просьбе пользователя. Никаких реальных курсов не существует.
+  * Все результаты сугубо индивидуальны и зависят от чистоты вашей кармы. Бумажная энергетика не является заменой финансовому консультированию, классическому образованию или здравому смыслу.<br>
+  Автор курса не несет ответственности за резкие изменения погоды, лунные затмения и качество канцелярских товаров в локальных магазинах.<br>
+  Этот лендинг создан исключительно как сатира и юмористический концепт. Никаких реальных курсов, бумажных эгрегоров и платных VIP-чатов не существует.
 </div>
 
 <script>
